@@ -12,14 +12,20 @@
 
 ### 数据文件
 
-为适配 GitHub 网页上传限制，图像和 mask 按类别拆成 4 个压缩包：
+为提高 GitHub 上传稳定性，图像按类别拆成多个小压缩包，mask 按类别打包：
 
-- `data/images_cup_ear.zip`
-- `data/images_helical_type.zip`
+- `data/images_cup_ear_part1.zip`
+- `data/images_cup_ear_part2.zip`
+- `data/images_cup_ear_part3.zip`
+- `data/images_cup_ear_part4.zip`
+- `data/images_helical_type_part1.zip`
+- `data/images_helical_type_part2.zip`
+- `data/images_helical_type_part3.zip`
+- `data/images_helical_type_part4.zip`
 - `data/masks_cup_ear.zip`
 - `data/masks_helical_type.zip`
 
-解压后请保持如下目录结构：
+每个 zip 解压后都包含相对路径。把所有压缩包解压到同一个目录后，应得到：
 
 ```text
 images/
@@ -49,8 +55,14 @@ masks/
 .
 +-- README.md
 +-- data/
-|   +-- images_cup_ear.zip
-|   +-- images_helical_type.zip
+|   +-- images_cup_ear_part1.zip
+|   +-- images_cup_ear_part2.zip
+|   +-- images_cup_ear_part3.zip
+|   +-- images_cup_ear_part4.zip
+|   +-- images_helical_type_part1.zip
+|   +-- images_helical_type_part2.zip
+|   +-- images_helical_type_part3.zip
+|   +-- images_helical_type_part4.zip
 |   +-- masks_cup_ear.zip
 |   +-- masks_helical_type.zip
 +-- metadata/
@@ -92,14 +104,20 @@ Both helical-type ear and cup ear are auricular deformity categories. This datas
 
 ### Data Files
 
-To fit GitHub web-upload limits, the images and masks are split into four archives:
+For more stable GitHub upload, the image files are split into several small archives by class, and the masks are packaged by class:
 
-- `data/images_cup_ear.zip`
-- `data/images_helical_type.zip`
+- `data/images_cup_ear_part1.zip`
+- `data/images_cup_ear_part2.zip`
+- `data/images_cup_ear_part3.zip`
+- `data/images_cup_ear_part4.zip`
+- `data/images_helical_type_part1.zip`
+- `data/images_helical_type_part2.zip`
+- `data/images_helical_type_part3.zip`
+- `data/images_helical_type_part4.zip`
 - `data/masks_cup_ear.zip`
 - `data/masks_helical_type.zip`
 
-After extraction, please keep the following directory structure:
+Each zip archive stores relative paths. After extracting all archives into the same directory, the expected structure is:
 
 ```text
 images/
@@ -129,8 +147,14 @@ The `image_path` and `mask_path` fields in `metadata/manifest.csv` are relative 
 .
 +-- README.md
 +-- data/
-|   +-- images_cup_ear.zip
-|   +-- images_helical_type.zip
+|   +-- images_cup_ear_part1.zip
+|   +-- images_cup_ear_part2.zip
+|   +-- images_cup_ear_part3.zip
+|   +-- images_cup_ear_part4.zip
+|   +-- images_helical_type_part1.zip
+|   +-- images_helical_type_part2.zip
+|   +-- images_helical_type_part3.zip
+|   +-- images_helical_type_part4.zip
 |   +-- masks_cup_ear.zip
 |   +-- masks_helical_type.zip
 +-- metadata/
